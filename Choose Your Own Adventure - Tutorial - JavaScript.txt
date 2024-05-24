@@ -1,21 +1,38 @@
 function playGame() {
 var enterCabin = confirm("You happen upon a really creepy looking dilapidated cabin in the woods. Do you go in and explore?");
+var outside = false;
 if (enterCabin) {
-  alert("you have entered the cabin. Great idea! /sarcasm");
-  var batChoice = prompt("It is spooky. Suddenly a bat flies from the rafters, close enough to your face that you can feel the flap of its wings. Do you 1) run out immediately, 2) continue on unfazed, or 3) try to make friends with the bat?");
+  alert("You have entered the cabin. Great idea! /sarcasm");
+  var batChoice = prompt("It is spooky. Suddenly a bat flies from the rafters, close enough to your face that you can feel the flap of its wings. Do you 1) run out immediately, 2) continue on unfazed, or 3) try to make friends with the bat? Type 1, 2, or 3");
   if (batChoice == "1") {
   alert("You have had enough adventurousness for one day. You get out of there.");
+  outside = true;
   } //run out after seeing bat
   if (batChoice == "2") {
   alert("You're made out of pretty strong stuff. A little bat isn't going to scare you.");
-  } //no reaction to bat
+  alert("You notice the cabin has gotten darker and darker, and you can barely see with just the dusky light coming from a small window.");
+  alert("A moment later it is pitch black, and you feel a hint of fear growing in your chest as you step forward to find the wall with your hand.");
+  alert("The wall isn't there. You spin around, grasping for anything to ground you in the blackness. There's nothing there.");
+  confirm("Do you scream?");
+  alert("The darkness doesn't care.");
+  } //no reaction to bat, swallowed by darkness
   if (batChoice == "3") {
-  alert("Bats are cute! You approach it slowly so as not to frighten it and hold your hand out in a show of friendship - How To Train Your Dragon style.");
-  } //let's make friends with the bat
+  alert("Bats are cute! You approach it slowly so as not to frighten it and hold your hand out in a show of friendship, How To Train Your Dragon style.");
+   alert("The bat leans out from the shadows, and you feel hopeful. In its eyes you see a shimmer of something, a melancholy desire for a connection it has not been allowed. You reach out a few fingers to pet its little tiny bat head...");
+  alert("and the bat's jaw hinges open, Golbat style, and swallows you right up. You have been eaten. <insert image of Golbat here>"); //ADD IMAGE
+  alert("Also you probably have rabies/are now a vampire, petting bats isn't a great idea.");
+  } //let's make friends with the bat, surely this will go well - eaten
+ 
 } //if entered cabin
 else {
   alert("You do not enter the creepy cabin. Smart.");
+  outside = true;
 } //else did not enter cabin
+if(outside) {
+	alert("Laughing at yourself for ever considering exploring an ominous cabin in the woods, you walk back down the trail leading out of the forest. The tree canopy casts dappled golden light on the ground in front of you.");
+  alert("You emerge from the woods to the last glimmers of the sinking sunset and head home.");
+  alert("You sleep well tonight");
+} //if did not go in/stay in cabin. lovely survival
 } //playGame
 
 playGame();
@@ -29,4 +46,4 @@ else {
 alert("Bye then!");
 }
 } 
-//tutorial from https://medium.com/@heoegema/coding-for-absolute-beginners-choose-your-own-adventure-tutorial-3613182c6097
+//based on tutorial from https://medium.com/@heoegema/coding-for-absolute-beginners-choose-your-own-adventure-tutorial-3613182c6097
